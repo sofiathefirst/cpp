@@ -1,0 +1,6 @@
+ssh-keygen -t rsa -C "zhangyumei@ctirobot.com"
+git rm src/*
+
+git commit -m "rm"
+git push origin master
+ssh-keygen -t rsa -C "843024750@qq.com"
