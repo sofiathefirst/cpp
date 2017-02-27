@@ -8,3 +8,4 @@ add_executable(fixUsbId src/getUSBid.cpp)
 
 add_executable(complex src/complex.cpp)
 add_executable(vector src/vector.cpp)
+add_executable(fileop src/fileop.cpp)
