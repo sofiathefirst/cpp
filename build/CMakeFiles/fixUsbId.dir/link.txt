@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/fixUsbId.dir/src/getUSBid.cpp.o  -o fixUsbId -rdynamic 
