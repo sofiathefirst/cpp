@@ -65,7 +65,7 @@ int test(int n,int k)
         //std::cout<<"******************";
  
        mydata.sort(node());
-        std::cout<<"the closest "<<m<<" points are:"<<endl;
+        std::cout<<"the closest "<<m<<" points are:"<<tdata.d[0]<<","<<tdata.d[1]<<","<<tdata.d[2]<<endl;
         itcon = mydata.begin();
                for(int i = 0;itcon!=mydata.end() && i<m;itcon++)
        
