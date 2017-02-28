@@ -11,7 +11,8 @@ int main (void) {
     myvector.at(888)=100;      // vector::at throws an out-of-range
 	std::cout<<myvector.at(888);
   }
-  catch (const std::out_of_range& oor) {
+  catch (const std::out_of_range& oor) 
+  {
     std::cerr << "Out of Range error: " << oor.what() << '\n';
   }
   return 0;
