@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/b/cpp/src/time.cpp
+iostream
+-
+fstream
+-
+cstring
+-
+ctime
+-
+unistd.h
+-
+

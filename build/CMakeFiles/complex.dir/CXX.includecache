@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/b/cpp/src/complex.cpp
+stdio.h
+-
+sys/types.h
+-
+ctype.h
+-
+stdint.h
+-
+iostream
+-
+typeinfo
+-
+
