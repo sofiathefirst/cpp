@@ -8,6 +8,6 @@ int main(void)
 	printf("pathvar=%s",pathvar);
 	if (pathvar==NULL)
 	pathvar="/home/b/aa22a.yaml";
-//setenv , unsetenv
+	//setenv , unsetenv
 	return 0;
 }

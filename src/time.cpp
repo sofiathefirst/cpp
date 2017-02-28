@@ -16,7 +16,7 @@ void clocktime()
 	cout<<"clock"<<end - start<<"time"<<le-lt<<endl;  
 }
 int main( ){     
-       clocktime();
-		return 0;
+	clocktime();
+	return 0;
 }
 
