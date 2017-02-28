@@ -7,9 +7,9 @@
 using namespace std;
 class complex
 {
-	public:
-		double real;
-		double im;
+public:
+	double real;
+	double im;
 	//int a[10];
 	~complex()
 	{
@@ -54,11 +54,11 @@ void test()
 	complex c=a+b;
 
 	if(c.real==5 && c.im==6)
-	printf("OK\n");
+		printf("OK\n");
 	else printf("ERROR\n");
 	a+=b;
 	if(a.real==5 && a.im==6)
-	printf("OK\n");
+		printf("OK\n");
 	else printf("ERROR\n");
 }
 int main(){
