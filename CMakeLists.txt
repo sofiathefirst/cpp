@@ -3,7 +3,10 @@ project(myroscpp)
 
 aux_source_directory(. DIR_SRCS)
 
+add_library(dutility SHARED  include/utilities_impl.cpp)
+add_library(sutility   include/utilities_impl.cpp)
 
+include_directories(include)
 add_executable(fixUsbId src/getUSBid.cpp)
 add_executable(complex src/complex.cpp)
 add_executable(vector src/vector.cpp)
@@ -16,3 +19,5 @@ add_executable(listsort src/listsort.cpp)
 add_executable(vectorsort src/vectorsort.cpp)
 add_executable(boostbind src/boostbind.cpp)
 add_executable(boostmoment src/boostmoment.cpp)
+add_executable(test src/utilities_test.cpp)
+target_link_libraries(test sutility)
