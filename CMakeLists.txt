@@ -21,3 +21,5 @@ add_executable(boostbind src/boostbind.cpp)
 add_executable(boostmoment src/boostmoment.cpp)
 add_executable(test src/utilities_test.cpp)
 target_link_libraries(test sutility)
+
+add_executable(map src/map.cpp)
