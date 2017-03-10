@@ -23,3 +23,4 @@ add_executable(test src/utilities_test.cpp)
 target_link_libraries(test sutility)
 
 add_executable(map src/map.cpp)
+add_executable(enum src/enum.cpp)
