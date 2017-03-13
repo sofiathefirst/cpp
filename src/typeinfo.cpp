@@ -1,23 +1,35 @@
-// type_info::name example
-#include <iostream>       // std::cout
-#include <typeinfo>       // operator typeid
+// type_info example
+#include <iostream>
+#include <typeinfo>
+using namespace std;
 
-class aatype
-{
-	public:
-	char* type()
-	{
-		return "aatype";
-	}
-};
+struct Base {};
+struct Derived : Base {};
+struct Poly_Base {virtual void Member(){}};
+struct Poly_Derived: Poly_Base {};
+
 int main() {
-  int i;
-  int * pi;
-  std::cout << "int is: " << typeid(int).name() << __LINE__<<','<<__FILE__<<__FUNCTION__<<'\n';
-  std::cout << "  i is: " << typeid(i).name() << '\n';
-  std::cout << " pi is: " << typeid(pi).name() << '\n';
-  std::cout << "*pi is: " << typeid(*pi).name() << '\n';
-aatype mydata;
-std::cout<<mydata.type()<<std::endl;
-  return 0;
+    // built-in types:
+    int i;
+    int * pi;
+    cout << "int is: " << typeid(int).name() << endl;
+    cout << "  i is: " << typeid(i).name() << endl;
+    cout << " pi is: " << typeid(pi).name() << endl;
+    cout << "*pi is: " << typeid(*pi).name() << endl << endl;
+
+    // non-polymorphic types:
+    Derived derived;
+    Base* pbase = &derived;
+    cout << "derived is: " << typeid(derived).name() << endl;
+    cout << " *pbase is: " << typeid(*pbase).name() << endl;
+    cout << boolalpha << "same type? "; 
+    cout << ( typeid(derived)==typeid(*pbase) ) << endl << endl;
+
+    // polymorphic types:
+    Poly_Derived polyderived;
+    Poly_Base* ppolybase = &polyderived;
+    cout << "polyderived is: " << typeid(polyderived).name() << endl;
+    cout << " *ppolybase is: " << typeid(*ppolybase).name() << endl;
+    cout << boolalpha << "same type? "; 
+    cout << ( typeid(polyderived)==typeid(*ppolybase) ) << endl << endl;
 }
