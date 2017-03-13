@@ -8,7 +8,7 @@ void  get(string str,string name,int &n)
 {
 	const char *p=str.c_str();
 	n=atoi(p+name.size()+1);
-	//std::cout<<name<<"=:"<<n<<endl;
+	std::cout<<name<<"=:"<<n<<endl;
 }
 void wrietf()
 {	

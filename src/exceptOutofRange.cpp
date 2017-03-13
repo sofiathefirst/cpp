@@ -8,6 +8,9 @@ int main (void) {
   try {
 	myvector.at(8)=888;  
 	std::cout<<myvector.at(8)<<endl; 
+
+  myvector[4554]=44;//does not throws an out-of-range
+  std::cout<<myvector.size()<<endl;
     myvector.at(888)=100;      // vector::at throws an out-of-range
 	std::cout<<myvector.at(888);
   }
