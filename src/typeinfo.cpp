@@ -7,7 +7,7 @@ struct Base {};
 struct Derived : Base {};
 struct Poly_Base {virtual void Member(){}};
 struct Poly_Derived: Poly_Base {};
-
+class mycalss{};
 int main() {
     // built-in types:
     int i;
@@ -32,4 +32,7 @@ int main() {
     cout << " *ppolybase is: " << typeid(*ppolybase).name() << endl;
     cout << boolalpha << "same type? "; 
     cout << ( typeid(polyderived)==typeid(*ppolybase) ) << endl << endl;
+
+    mycalss dd;
+    cout<<typeid(dd).name()<<endl;
 }
