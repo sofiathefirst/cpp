@@ -24,3 +24,5 @@ target_link_libraries(test sutility)
 
 add_executable(map src/map.cpp)
 add_executable(enum src/enum.cpp)
+add_executable(typeinfo src/typeinfo.cpp)
+add_executable(LINE src/LINE.cpp)
