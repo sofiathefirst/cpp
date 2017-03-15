@@ -27,3 +27,7 @@ add_executable(enum src/enum.cpp)
 add_executable(typeinfo src/typeinfo.cpp)
 add_executable(LINE src/LINE.cpp)
 add_executable(assert src/assert.cpp)
+add_executable(math1 src/math.cpp)
+#target_link_libraries(math m)
+
+#add_executable(math src/math.cpp)

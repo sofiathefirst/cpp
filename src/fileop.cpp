@@ -1,3 +1,6 @@
+/*
+http://www.cplusplus.com/reference/fstream/
+*/
 #include<vector>
 #include<iostream>
 #include<fstream>
