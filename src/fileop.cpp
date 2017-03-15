@@ -1,5 +1,41 @@
 /*
 http://www.cplusplus.com/reference/fstream/
+http://www.cplusplus.com/reference/fstream/ifstream/open/
+// print the content of a text file.
+#include <iostream>     // std::cout
+#include <fstream>      // std::ifstream
+
+int main () {
+  std::ifstream ifs;
+
+  ifs.open ("test.txt", std::ifstream::in);
+
+  char c = ifs.get();
+
+  while (ifs.good()) {
+    std::cout << c;
+    c = ifs.get();
+  }
+
+  ifs.close();
+
+  return 0;
+}
+http://www.cplusplus.com/reference/fstream/ofstream/open/
+// ofstream::open / ofstream::close
+#include <fstream>      // std::ofstream
+
+int main () {
+
+  std::ofstream ofs;
+  ofs.open ("test.txt", std::ofstream::out | std::ofstream::app);
+
+  ofs << " more lorem ipsum";
+
+  ofs.close();
+
+  return 0;
+}
 */
 #include<vector>
 #include<iostream>
