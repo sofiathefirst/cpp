@@ -1,5 +1,19 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(myroscpp)
+# check c++11 / c++0x
+
+find_package(pthread)
+include(CheckCXXCompilerFlag)
+CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
+CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)
+if(COMPILER_SUPPORTS_CXX11)
+    set(CMAKE_CXX_FLAGS "-std=c++11")
+elseif(COMPILER_SUPPORTS_CXX0X)
+    set(CMAKE_CXX_FLAGS "-std=c++0x")
+else()
+    message(FATAL_ERROR "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler. Suggested solution: update the pkg build-essential ")
+endif()
+
 
 aux_source_directory(. DIR_SRCS)
 
@@ -25,9 +39,17 @@ target_link_libraries(test sutility)
 add_executable(map src/map.cpp)
 add_executable(enum src/enum.cpp)
 add_executable(typeinfo src/typeinfo.cpp)
-add_executable(LINE src/LINE.cpp)
+#add_executable(LINE src/LINE.cpp)
 add_executable(assert src/assert.cpp)
 add_executable(math1 src/math.cpp)
 #target_link_libraries(math m)
 
+add_executable(mythread src/mythread.cpp)
+target_link_libraries(mythread pthread)
+
+add_executable(classthread src/myclassthread.cpp)
+target_link_libraries(classthread pthread)
 #add_executable(math src/math.cpp)
+
+
+
