@@ -51,5 +51,6 @@ add_executable(classthread src/myclassthread.cpp)
 target_link_libraries(classthread pthread)
 #add_executable(math src/math.cpp)
 
+add_executable(vector_emplace src/vector_emplace.cpp)
 
 
