@@ -56,3 +56,6 @@ add_executable(vector_emplace src/vector_emplace.cpp)
 add_executable(example src/example.cpp)
 target_link_libraries(example pthread)
 
+add_executable(ftrexample src/future_example.cpp)
+target_link_libraries(ftrexample pthread)
+
