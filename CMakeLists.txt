@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(myroscpp)
 # check c++11 / c++0x
+SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11 -pthread")
 
 find_package(pthread)
 include(CheckCXXCompilerFlag)
@@ -16,6 +17,14 @@ endif()
 
 
 aux_source_directory(. DIR_SRCS)
+
+add_executable(hello1 src/fork/hello.cpp)
+target_link_libraries (hello1 ${CMAKE_THREAD_LIBS_INIT})
+
+add_executable(exep src/fork/exep.cpp)
+target_link_libraries (exep ${CMAKE_THREAD_LIBS_INIT})
+
+
 
 add_library(dutility SHARED  include/utilities_impl.cpp)
 add_library(sutility   include/utilities_impl.cpp)
