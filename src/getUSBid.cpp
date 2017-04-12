@@ -1,7 +1,7 @@
 #include <iostream>  
 #include <fstream>  
 #include <cstring>
-
+#include <string>
 using namespace std;
 //char buf
 char get_ttyUSB_id(const char* physical_id)
@@ -28,6 +28,11 @@ int main( )
   const char *fpga_physical_id = "1-3";     
   char  fpga_ttyUSB_id = get_ttyUSB_id(fpga_physical_id); 
   std::cout<<fpga_ttyUSB_id<<endl;
+char strs[]="/dev/ttyUSB0";
+ strs[11]='4';
+std::cout<<strs<<endl;
+std::string s=strs;
+std::cout<<s<<endl;
   return 0;
 }
 
