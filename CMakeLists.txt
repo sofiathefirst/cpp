@@ -24,6 +24,13 @@ target_link_libraries (hello1 ${CMAKE_THREAD_LIBS_INIT})
 add_executable(exep src/fork/exep.cpp)
 target_link_libraries (exep ${CMAKE_THREAD_LIBS_INIT})
 
+add_executable(myfork src/fork/myfork.cpp)
+target_link_libraries (myfork ${CMAKE_THREAD_LIBS_INIT})
+
+add_executable(kill src/fork/kill.cpp)
+target_link_libraries (kill ${CMAKE_THREAD_LIBS_INIT})
+
+
 
 
 add_library(dutility SHARED  include/utilities_impl.cpp)
