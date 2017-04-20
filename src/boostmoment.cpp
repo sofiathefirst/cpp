@@ -18,5 +18,6 @@ int main()
     // Display the results ...
     std::cout << "Mean:   " << mean(acc) << std::endl;  //一阶矩，期望
     std::cout << "Moment: " <<  moment<2>(acc) << std::endl;//二阶矩，平方的期望
+     
     return 0;
 }
