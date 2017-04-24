@@ -19,15 +19,16 @@ int main()
      
         boost::iostreams::filtering_ostream out;
         out.push(boost::iostreams::gzip_compressor());
-        out.push(boost::iostreams::file_sink("test4.gz"));
+        out.push(boost::iostreams::file_sink("testz.gz"));
         //out.push(boost::iostreams::back_inserter(dest));
-        boost::iostreams::write(out, "c1esba\n2222a\n4rratasfd", 20);
+        boost::iostreams::write(out, "3c1esba\n2222a\n4rratasfd", 20);
 
         //boost::iostreams::filtering_streambuf<boost::iostreams::output> compress_out;  
        // boost::iostreams::copy(ifs, out);
         //boost::iostreams::copy(std::stringstream("hello"), out);
         //std::cout << "dest:" << dest << std::endl;
         //out.clear();
+        boost::iostreams::close(out, std::ios_base::out);
         boost::iostreams::filtering_istream in;
          std::stringstream ss_decomp;  
         in.push(boost::iostreams::gzip_decompressor());
