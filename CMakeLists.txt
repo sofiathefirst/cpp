@@ -3,7 +3,10 @@ project(myroscpp)
 # check c++11 / c++0x
 SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11 -pthread")
 
-find_package(pthread)
+#find_package(pthread )
+find_package(Boost REQUIRED COMPONENTS system)
+message('boost &&&:')
+
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
 CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)
@@ -19,7 +22,16 @@ endif()
 aux_source_directory(. DIR_SRCS)
 
 add_executable(hello1 src/fork/hello.cpp)
+
 target_link_libraries (hello1 ${CMAKE_THREAD_LIBS_INIT})
+
+
+add_executable(boost_rar1 src/boost_rar1.cpp)
+target_link_libraries (boost_rar1 boost_iostreams boost_locale)
+
+
+add_executable(boost_rar src/boost_rar.cpp)
+target_link_libraries (boost_rar boost_iostreams boost_locale)
 
 add_executable(exep src/fork/exep.cpp)
 target_link_libraries (exep ${CMAKE_THREAD_LIBS_INIT})
