@@ -20,18 +20,18 @@ endif()
 
 
 aux_source_directory(. DIR_SRCS)
-
+add_subdirectory("boost_learn") 
 add_executable(hello1 src/fork/hello.cpp)
 
 target_link_libraries (hello1 ${CMAKE_THREAD_LIBS_INIT})
 
 
-add_executable(boost_rar1 src/boost_rar1.cpp)
-target_link_libraries (boost_rar1 boost_iostreams boost_locale)
+#add_executable(boost_rar1 src/boost_rar1.cpp)
+#target_link_libraries (boost_rar1 boost_iostreams boost_locale)
 
 
-add_executable(boost_rar src/boost_rar.cpp)
-target_link_libraries (boost_rar boost_iostreams boost_locale)
+#add_executable(boost_rar src/boost_rar.cpp)
+#target_link_libraries (boost_rar boost_iostreams boost_locale)
 
 add_executable(exep src/fork/exep.cpp)
 target_link_libraries (exep ${CMAKE_THREAD_LIBS_INIT})
