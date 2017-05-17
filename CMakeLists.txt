@@ -42,8 +42,8 @@ target_link_libraries (myfork ${CMAKE_THREAD_LIBS_INIT})
 add_executable(kill src/fork/kill.cpp)
 target_link_libraries (kill ${CMAKE_THREAD_LIBS_INIT})
 
-
-
+add_executable(hypot src/hypot.c)
+target_link_libraries(hypot m)
 
 add_library(dutility SHARED  include/utilities_impl.cpp)
 add_library(sutility   include/utilities_impl.cpp)
