@@ -1,10 +1,10 @@
-#include <iostream>  
+#include <stdio.h>  
 //include <fstream>  
 //#include <cstring>
-#include <ctime>
+#include <time.h>
 //#include <unistd.h>
 
-using namespace std;
+//using namespace std;
 time_t clocktime()
 {
 	//clock_t start = clock();  
@@ -16,18 +16,14 @@ time_t clocktime()
 //	cout<<"clock"<<end - start<<"time"<<le-lt<<endl<<start<<endl<<lt<<endl;  
 
 struct tm *tmday=localtime(&le);
-cout<<tmday->tm_year<<",";
-cout<<tmday->tm_mon<<",";
-cout<<tmday->tm_mday<<",";
-cout<<tmday->tm_hour<<",";
-cout<<tmday->tm_min<<",";
-cout<<tmday->tm_sec<<",\n";
+
 tmday->tm_hour=0;
 tmday->tm_min=0;
 tmday->tm_sec=0;
 
 
-cout<<"stamp"<<mktime(tmday)<<endl;
+//cout<<"stamp"<<mktime(tmday)<<endl;
+printf("%lld\n",mktime(tmday));
 return mktime(tmday);
 
 }
