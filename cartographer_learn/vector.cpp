@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 #include <algorithm>
 using namespace std;
 
@@ -20,6 +21,12 @@ int main()
     std::accumulate(data.begin(), data.end(), 0.f) / data.size();
     std::cout<<"mean:="<<mean<<std::endl;
 
+
+  string result = "Count: " + std::to_string(data.size()) +
+                  "  Min: " + std::to_string(min) +
+                  "  Max: " + std::to_string(max) +
+                  "  Mean: " + std::to_string(mean);
+std::cout<<result<<endl;
     return 0;
 
 }
