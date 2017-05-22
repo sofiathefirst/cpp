@@ -21,6 +21,10 @@ endif()
 
 aux_source_directory(. DIR_SRCS)
 add_subdirectory("boost_learn") 
+
+add_subdirectory("cartographer_learn") 
+
+
 add_executable(hello1 src/fork/hello.cpp)
 
 target_link_libraries (hello1 ${CMAKE_THREAD_LIBS_INIT})
