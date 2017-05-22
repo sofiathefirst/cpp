@@ -10,12 +10,16 @@ int main()
     data.push_back(-2);
     data.push_back(20);
     data.push_back(12);
+ 
+    const int min = *std::min_element(data.begin(), data.end());
+    const int max = *std::max_element(data.begin(), data.end());
 
-  
-  const int min = *std::min_element(data.begin(), data.end());
-  const int max = *std::max_element(data.begin(), data.end());
+    std::cout<<"min:="<<min<<",  max:= "<<max<<std::endl;
 
-  std::cout<<"min:="<<min<<",  max:= "<<max<<std::endl;
-  return 0;
+    const float mean =
+    std::accumulate(data.begin(), data.end(), 0.f) / data.size();
+    std::cout<<"mean:="<<mean<<std::endl;
+
+    return 0;
 
 }
