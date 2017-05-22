@@ -1,4 +1,9 @@
+
 find_package(Boost REQUIRED COMPONENTS system thread iostreams)
+find_package(Protobuf REQUIRED) 
+include(FindPkgConfig)
+
+
 
 message('boost &&&:' ${Boost_LIBRARIES})
 

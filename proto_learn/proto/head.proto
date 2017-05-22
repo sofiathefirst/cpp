@@ -1,0 +1,5 @@
+message head
+{
+  required int32 type = 1;
+  required bytes st = 2;
+}
